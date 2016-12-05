@@ -41,7 +41,11 @@ fn main() {
     let src = "Hello!";
     let src_data = src.as_bytes();
 
+    let mdata = data as *mut libc::c_void;
+
+
     unsafe {
+        libc::madvise(mdata, 4096, libc::MADV_RANDOM);
         ptr::copy(src_data.as_ptr(), data, src_data.len());
     }
 }
