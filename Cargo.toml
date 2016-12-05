@@ -1,0 +1,9 @@
+[package]
+name = "mymmap"
+version = "0.1.0"
+authors = ["Jun He <jhe@cs.wisc.edu>"]
+
+[dependencies]
+libc = "0.2"
+mmap = "*"
+
