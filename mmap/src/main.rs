@@ -24,7 +24,7 @@ fn main() {
 
     let mmap_opts = &[
         // Then make the mapping *public* so it is written back to the file
-        MapOption::MapNonStandardFlags(libc::consts::os::posix88::MAP_SHARED),
+        MapOption::MapNonStandardFlags(libc::MAP_SHARED),
         MapOption::MapReadable,
         MapOption::MapWritable,
         MapOption::MapFd(f.as_raw_fd()),
